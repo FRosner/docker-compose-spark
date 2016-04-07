@@ -1,0 +1,16 @@
+master:
+  image: frosner/spark
+  environment:
+    ID: dlv
+    SPARK_ROLE: spark-master
+  ports:
+    - 8080:8080
+  expose:
+    - "7077"
+slave:
+  image: frosner/spark
+  links:
+    - master
+  environment:
+    ID: dlv
+    SPARK_ROLE: spark-slave
