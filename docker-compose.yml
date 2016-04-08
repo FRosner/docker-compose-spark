@@ -22,5 +22,6 @@ zeppelin:
     ID: dlv
   ports:
     - 20001:8080
+    - 20002:4040
   volumes:
     - ./notebooks:/usr/local/zeppelin/notebooks
