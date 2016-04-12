@@ -1,5 +1,5 @@
 master:
-  image: frosner/spark
+  image: frosner/spark-node
   environment:
     ID: dlv
     SPARK_ROLE: spark-master
@@ -8,7 +8,7 @@ master:
   expose:
     - "7077"
 slave:
-  image: frosner/spark
+  image: frosner/spark-node
   links:
     - master
   environment:
