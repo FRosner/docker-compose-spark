@@ -4,7 +4,7 @@ master:
     ID: dlv
     SPARK_ROLE: spark-master
   ports:
-    - 20000:8080
+    - "8080"
   expose:
     - "7077"
 slave:
@@ -21,7 +21,7 @@ zeppelin:
   environment:
     ID: dlv
   ports:
-    - 20001:8080
-    - 20002:4040
+    - "8080"
+    - "4040"
   volumes:
     - ./notebooks:/usr/local/zeppelin/notebooks
